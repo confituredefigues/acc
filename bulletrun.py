@@ -13,7 +13,7 @@ for env_id in ["MinitaurBulletEnv-v0"]:
     # for seed in [457,728]:
     # for seed in [101,729]:
         ########################### PPO ACC ############################
-        log_dir = "./logs/%s/tb/PPO_seed%s_kernel32_transformer_rew0004_loss01_coefw1overT1000_approxkl_lr00002_nsteps2048_bs64_nepoch10_entcoef0_noavec_noclipvf_normadv" % (
+        log_dir = "./logs/%s/tb/PPO_seed%s_kernel32_transformer_rew0004_loss01_coefw1overT1000_approxkl_lr00002_nsteps2048_bs64_nepoch10_entcoef0_noavec" % (
             env_id, seed)
         os.makedirs(log_dir, exist_ok=True)
         env = make_bullet_env(env_id, 1, seed, monitor_dir=log_dir)
