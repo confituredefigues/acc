@@ -1,0 +1,4 @@
+include *.md
+recursive-include acc *.jpg
+recursive-include acc *.png
+recursive-include acc *.pdf
