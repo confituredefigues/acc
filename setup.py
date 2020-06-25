@@ -20,9 +20,9 @@ setup(
         'seaborn',
         'tensorflow==1.14.0',
         'pybullet',
-        # 'gym-minigrid@git+https://github.com/confituredefigues/acc/gym-minigrid@master#egg=gym-minigrid',
+        # 'gym-minigrid@git+https://github.com/confituredefigues/acc@develop#egg=gym-minigrid&subdirectory=gym-minigrid',
         'slimevolleygym@git+https://github.com/hardmaru/slimevolleygym@master#egg=slimevolleygym',
-        'vizdoomgym@git+https://github.com/shakenes/vizdoomgym@master#egg=vizdoomgym',
+        # 'vizdoomgym@git+https://github.com/shakenes/vizdoomgym@master#egg=vizdoomgym',
         # 'optuna',
     ],
     python_requires='>=3.6',
@@ -32,6 +32,7 @@ setup(
         "Programming Language :: Python",
     ],
     entry_points={
+        "distutils.commands": ["compile = package.commands:Compile"]
     },
     license="MIT",
 )
