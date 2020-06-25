@@ -20,7 +20,6 @@ plot_tf.py
 /build
 keys/
 viz/
-gym-minigrid/
 
 # Virtualenv
 /env
@@ -30,7 +29,6 @@ gym-minigrid/
 *.sublime-workspace
 
 logs/
-gym-minigrid/
 
 .ipynb_checkpoints
 ghostdriver.log
