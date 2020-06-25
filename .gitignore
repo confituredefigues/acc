@@ -19,7 +19,6 @@ plot_tf.py
 /dist/
 /build
 keys/
-viz/
 
 # Virtualenv
 /env
