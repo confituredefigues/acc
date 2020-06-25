@@ -1,43 +1,40 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
- 
-from setuptools import setup, find_packages
 
-import acc
+from setuptools import setup
 
 setup(
     name='acc',
-    version=acc.__version__,
-    packages=find_packages(),
+    version="0.1.0",
     author="Yannis Flet-Berliac & Johan Ferret",
-    author_email="yannisfbe@gmail.com",
+    author_email="fletberliac@gmail.com",
     description="ACC RL agent",
     install_requires=[
-        'cloudpickle',
-        #'cv2',
+        'cloudpickle==1.2.2',
+        'opencv-python',
         'gym',
-        'gym-minigrid',
         'matplotlib',
-        #'mpi4py',
         'numpy',
-        'optuna',
         'pandas',
-        #'pybullet',
-        'scipy',
+        'scipy==1.1.0',
         'seaborn',
-        'slimevolleygym',
-        'tensorflow',
-        #'vizdoomgym @ git+ssh://git@github.com/shakenes/vizdoomgym@master#egg=vizdoomgym',
+        'tensorflow==1.14.0',
+        'pybullet',
+        # 'gym-minigrid@git+https://github.com/confituredefigues/acc/gym-minigrid@master#egg=gym-minigrid',
+        'slimevolleygym@git+https://github.com/hardmaru/slimevolleygym@master#egg=slimevolleygym',
+        'vizdoomgym@git+https://github.com/shakenes/vizdoomgym@master#egg=vizdoomgym',
+        # 'optuna',
     ],
-    #dependency_links=[
-    #    'https://github.com/shakenes/vizdoomgym',
-    #],
+    python_requires='>=3.6',
     include_package_data=True,
     url='http://github.com/confituredefigues/acc',
     classifiers=[
         "Programming Language :: Python",
     ],
-    entry_points = {
+    entry_points={
     },
     license="MIT",
 )
+
+# If "ERROR: Failed building wheel for vizdoom", run:
+# sudo apt-get install cmake libboost-all-dev libgtk2.0-dev libsdl2-dev python-numpy
